@@ -1,0 +1,59 @@
+<app-header class="ion-text-center" titulo="Crea tu ruta "> </app-header>
+<ion-content class="ion-float-left ion-margin ion-padding">
+ 
+        <div id="floating-panel" class="form-check">
+          <ion-grid>
+            <ion-row class="ion-justify-content-start">
+              <ion-col size="12">
+                
+                <ion-item>
+                  <ion-label>Inicio de ruta:</ion-label>
+                  <ion-input
+                    [(ngModel)]="start"
+                    id="start"
+                    (change)="calculateAndDisplayRoute()"
+                    placeholder="Punto de partida"
+                  
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label>Final de la ruta:</ion-label>
+                  <ion-input [(ngModel)]="end"
+                    id="end"
+                    (change)="calculateAndDisplayRoute()"
+                    placeholder="Punto de llegada"
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
+              
+              <!--  FECHAS-->
+              <ion-col size="12">
+                  <ion-datetime-button datetime="datetime"  ></ion-datetime-button>
+                  <ion-modal [keepContentsMounted]="true">
+                    <ng-template>
+                      <ion-datetime id="datetime"></ion-datetime>
+                    </ng-template>
+                  </ion-modal>
+              </ion-col>
+
+              <!-- DIFICULTAD -->
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label>Difucultad:</ion-label>
+                  <ion-input placeholder="Bajo - Medio - Alto" ></ion-input>
+                </ion-item>
+              </ion-col>
+              
+            </ion-row>
+          </ion-grid>
+        </div>
+  <div #map id="map"></div>
+<br>
+  <p class="ion-text-center">
+    <ion-button type="submit"  color="dark" class="card-img-top" expand="block">
+       Crear nueva ruta
+    </ion-button>
+</p>
+</ion-content>

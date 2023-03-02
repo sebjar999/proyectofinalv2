@@ -1,0 +1,47 @@
+<app-header class="ion-text-center" titulo="Editar tu usuario">
+</app-header>
+
+<ion-content class="ion-float-left ion-margin ion-padding ">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <h1>Editas datos</h1>
+                <hr>
+                <form class="mid-form"(ngSubmit)="onSubmit()">
+                  <div class="form-check">
+                   <ion-item>
+                    <ion-input type="name" placeholder="Nombre completo:" maxlength="20" ></ion-input>
+                   </ion-item><br>
+                   </div>
+                   <div class="form-check">
+                    <ion-item>
+                        <ion-input type="familyName " placeholder="Apellidos :" maxlength="20" name="last_name" ></ion-input>
+                    </ion-item><br>
+                    </div>
+                    <div class="form-check">
+                    <ion-item>
+                        <ion-input type="email" placeholder="El Correo electronico no se puede editar" maxlength="50" name="email"  maxlength="50" disabled></ion-input>
+                    </ion-item><br>
+                    </div>
+                    <div class="form-check">
+                    <ion-item>
+                        <ion-input type="password" placeholder="Nueva Contraseña:" maxlength="10" ></ion-input>
+                    </ion-item><br>
+                    </div>
+                    <div class="form-check">
+                    <ion-item>
+                        <ion-input type="password" placeholder="Confirmar Contraseña:" maxlength="10"   ></ion-input>
+                    </ion-item><br>
+                    </div>
+                    <p class="ion-text-center">
+                        <ion-button type="submit" color="dark" class="card-img-top"  expand="block">
+                            Editar datos
+                        </ion-button>
+                     </p>
+                </form>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>

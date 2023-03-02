@@ -1,0 +1,37 @@
+<app-header class="ion-text-center" titulo="Lista de rutas "></app-header>
+
+<ion-content>
+    <div class="row container">
+        <div class="col-2"></div>
+
+        <div class="col">
+
+            <div class="row">
+
+                <div class="col-4 mb-6" *ngFor="let propiedad of propiedades">
+                    <ion-card>
+                        <!-- <app-mini-mapa [lngLat]="propiedad.lngLat" class="card-img-top"></app-mini-mapa> -->
+                        <div class="card-body">
+                            <ion-card-header class=""> {{propiedad.titulo}} </ion-card-header>
+                            <ion-card-content> {{propiedad.descripcion}} </ion-card-content>
+                        </div>
+                    </ion-card>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button>
+            <ion-icon name="chevron-up-circle"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+            <ion-fab-button>
+                <ion-icon name="close-circle-outline" [routerLink]=" '/rutas-disponibles' "></ion-icon>
+            </ion-fab-button>
+          
+        </ion-fab-list>
+    </ion-fab>
+</ion-content>

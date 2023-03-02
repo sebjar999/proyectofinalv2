@@ -1,0 +1,34 @@
+<app-header titulo="Editar ruta"></app-header>
+
+<ion-content>
+  <div id="floating-panel">
+    <ion-grid>
+      <ion-row class="ion-justify-content-start">
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>Inicio de ruta:</ion-label>
+            <ion-input
+              [(ngModel)]="start"
+              id="start"
+              (change)="calculateAndDisplayRoute()"
+              placeholder="Punto de partida"
+            ></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>Final de la ruta:</ion-label>
+            <ion-input
+              [(ngModel)]="end"
+              id="end"
+              (change)="calculateAndDisplayRoute()"
+              placeholder="Punto de llegada"
+            ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div #map id="maps"></div>
+</ion-content>
